@@ -1,0 +1,60 @@
+TARGET = $$qt5LibraryTarget(quazip)
+CONFIG += qt warn_on
+QT -= gui
+TEMPLATE = lib
+CONFIG  += qt warn_on
+<<<<<<< HEAD
+#CONFIG += plugin
+=======
+CONFIG  += plugin
+>>>>>>> develop
+CONFIG  += relative_qt_rpath
+#CONFIG  += build_all
+
+#!ios:DESTDIR = $$APPLICATION_LIBS
+#else:
+#works on iOS and mac
+DESTDIR = $$[QT_INSTALL_LIBS]
+warning("QUAZIP WILL BE EXPORTED TO "$$DESTDIR)
+
+CONFIG(debug, debug|release) {
+    DEBUG_OR_RELEASE = debug
+    android{
+        TARGET = $$join(TARGET,,,d)
+    }
+#    }
+}else {
+    DEBUG_OR_RELEASE = release
+}
+
+
+windows{
+    ZLIB_PWD = $$PWD/../../externals
+    INCLUDEPATH += $$ZLIB_PWD/zlib-1.2.8/
+    DEPENDPATH += $$ZLIB_PWD/zlib-1.2.8/
+#    warning ("Inscluded Path: " $$ZLIB_PWD/zlib-1.2.8/);
+}else{
+    LIBS += -lz
+}
+
+
+
+# This one handles dllimport/dllexport directives.
+DEFINES += QUAZIP_BUILD
+
+## You'll need to define this one manually if using a build system other
+## than qmake or using QuaZIP sources directly in your project.
+CONFIG(staticlib): DEFINES += QUAZIP_STATIC
+
+include($$PWD/quazip.pri)
+
+win32 {
+    headers.path= $$plugins_dir/include/quazip
+    headers.files=$$HEADERS
+    target.path=$$PREFIX/lib
+    INSTALLS += headers target
+    # workaround for qdatetime.h macro bug
+    DEFINES += NOMINMAX
+}
+
+CONFIG += install_ok  # Do not cargo-cult this!

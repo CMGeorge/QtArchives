@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6BC20A13-B53B-30DA-A2F5-E086637DCC42}</ProjectGuid>
+    <RootNamespace>quazip</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <MinimumVisualStudioVersion>14.00</MinimumVisualStudioVersion>
+    <DefaultLanguage>en</DefaultLanguage>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.14393.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\plugins\5.9.1\winrt-x64-msvc2015\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>build\.obj\5.9.1\winrt-x64-msvc2015\</IntermediateDirectory>
+    <PrimaryOutput>quazip</PrimaryOutput>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\plugins\5.9.1\winrt-x64-msvc2015\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>build\.obj\5.9.1\winrt-x64-msvc2015\</IntermediateDirectory>
+    <PrimaryOutput>quazip</PrimaryOutput>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">..\..\plugins\5.9.1\winrt-x64-msvc2015\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">build\.obj\5.9.1\winrt-x64-msvc2015\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">quazip</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</IgnoreImportLibrary>
+    <GenerateManifest Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">false</GenerateManifest>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">..\..\plugins\5.9.1\winrt-x64-msvc2015\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">build\.obj\5.9.1\winrt-x64-msvc2015\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">quazip</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">false</LinkIncremental>
+    <GenerateManifest Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\externals\zlib-1.2.8;.;C:\Qt\5.9.1\winrt_x64_msvc2015\include;C:\Qt\5.9.1\winrt_x64_msvc2015\include\QtCore;build\.moc\5.9.1\winrt-x64-msvc2015;C:\Qt\5.9.1\winrt_x64_msvc2015\mkspecs\winrt-x64-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>build\.obj\5.9.1\winrt-x64-msvc2015\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>build\.obj\5.9.1\winrt-x64-msvc2015\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;Q_BYTE_ORDER=Q_LITTLE_ENDIAN;WINAPI_FAMILY=WINAPI_FAMILY_PC_APP;WINAPI_PARTITION_PHONE_APP=1;X64;__X64__;__x64__;QUAZIP_BUILD;NOMINMAX;QT_CORE_LIB;QT_QML_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ucrtd.lib;vcruntimed.lib;windowscodecs.lib;WindowsApp.lib;runtimeobject.lib;OneCore.lib;C:\Qt\5.9.1\winrt_x64_msvc2015\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\5.9.1\winrt_x64_msvc2015\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/APPCONTAINER %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateManifest>false</GenerateManifest>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;kernel32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\quazip.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;Q_BYTE_ORDER=Q_LITTLE_ENDIAN;WINAPI_FAMILY=WINAPI_FAMILY_PC_APP;WINAPI_PARTITION_PHONE_APP=1;X64;__X64__;__x64__;QUAZIP_BUILD;NOMINMAX;QT_CORE_LIB;QT_QML_DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <Target Name="WinDeployQt_Debug|x64" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Inputs="$(OutDir)\$(TargetName).exe" Outputs="$(TargetName).windeployqt.$(Platform).$(Configuration)">
+    <Message Text="C:\Qt\5.9.1\winrt_x64_msvc2015\bin\windeployqt.exe -qmldir C:\Dev\Qt\CyberTrackerQt\libs\quazip -list relative -dir &quot;$(MSBuildProjectDirectory)&quot; &quot;$(OutDir)\$(TargetName).exe&quot; > &quot;$(TargetName).windeployqt.$(Platform).$(Configuration)&quot;" />
+    <Exec Command="C:\Qt\5.9.1\winrt_x64_msvc2015\bin\windeployqt.exe -qmldir C:\Dev\Qt\CyberTrackerQt\libs\quazip -list relative -dir &quot;$(MSBuildProjectDirectory)&quot; &quot;$(OutDir)\$(TargetName).exe&quot; > &quot;$(TargetName).windeployqt.$(Platform).$(Configuration)&quot;" />
+  </Target>
+  <Target Name="PopulateWinDeployQtItems_Debug|x64" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" AfterTargets="Link" DependsOnTargets="WinDeployQt_Debug|x64">
+    <ReadLinesFromFile File="$(TargetName).windeployqt.$(Platform).$(Configuration)">
+      <Output TaskParameter="Lines" ItemName="DeploymentItems" />
+    </ReadLinesFromFile>
+    <ItemGroup>
+      <None Include="@(DeploymentItems)">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+  </Target>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\externals\zlib-1.2.8;.;C:\Qt\5.9.1\winrt_x64_msvc2015\include;C:\Qt\5.9.1\winrt_x64_msvc2015\include\QtCore;build\.moc\5.9.1\winrt-x64-msvc2015;C:\Qt\5.9.1\winrt_x64_msvc2015\mkspecs\winrt-x64-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>build\.obj\5.9.1\winrt-x64-msvc2015\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>build\.obj\5.9.1\winrt-x64-msvc2015\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;Q_BYTE_ORDER=Q_LITTLE_ENDIAN;WINAPI_FAMILY=WINAPI_FAMILY_PC_APP;WINAPI_PARTITION_PHONE_APP=1;X64;__X64__;__x64__;QUAZIP_BUILD;NOMINMAX;QT_NO_DEBUG;QT_CORE_LIB;QT_QML_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ucrt.lib;vcruntime.lib;windowscodecs.lib;WindowsApp.lib;runtimeobject.lib;OneCore.lib;C:\Qt\5.9.1\winrt_x64_msvc2015\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\5.9.1\winrt_x64_msvc2015\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/APPCONTAINER %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateManifest>false</GenerateManifest>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;kernel32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\quazip.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;Q_BYTE_ORDER=Q_LITTLE_ENDIAN;WINAPI_FAMILY=WINAPI_FAMILY_PC_APP;WINAPI_PARTITION_PHONE_APP=1;X64;__X64__;__x64__;QUAZIP_BUILD;NOMINMAX;QT_NO_DEBUG;QT_CORE_LIB;QT_QML_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <Target Name="WinDeployQt_Release|x64" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Inputs="$(OutDir)\$(TargetName).exe" Outputs="$(TargetName).windeployqt.$(Platform).$(Configuration)">
+    <Message Text="C:\Qt\5.9.1\winrt_x64_msvc2015\bin\windeployqt.exe -qmldir C:\Dev\Qt\CyberTrackerQt\libs\quazip -list relative -dir &quot;$(MSBuildProjectDirectory)&quot; &quot;$(OutDir)\$(TargetName).exe&quot; > &quot;$(TargetName).windeployqt.$(Platform).$(Configuration)&quot;" />
+    <Exec Command="C:\Qt\5.9.1\winrt_x64_msvc2015\bin\windeployqt.exe -qmldir C:\Dev\Qt\CyberTrackerQt\libs\quazip -list relative -dir &quot;$(MSBuildProjectDirectory)&quot; &quot;$(OutDir)\$(TargetName).exe&quot; > &quot;$(TargetName).windeployqt.$(Platform).$(Configuration)&quot;" />
+  </Target>
+  <Target Name="PopulateWinDeployQtItems_Release|x64" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" AfterTargets="Link" DependsOnTargets="WinDeployQt_Release|x64">
+    <ReadLinesFromFile File="$(TargetName).windeployqt.$(Platform).$(Configuration)">
+      <Output TaskParameter="Lines" ItemName="DeploymentItems" />
+    </ReadLinesFromFile>
+    <ItemGroup>
+      <None Include="@(DeploymentItems)">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+  </Target>
+  <ItemGroup>
+    <ClCompile Include="JlCompress.cpp" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\adler32.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\crc32.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\deflate.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\gzclose.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\gzlib.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\gzread.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\gzwrite.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\infback.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\inffast.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\inflate.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\inftrees.c" />
+    <ClCompile Include="qioapi.cpp" />
+    <ClCompile Include="quaadler32.cpp" />
+    <ClCompile Include="quacrc32.cpp" />
+    <ClCompile Include="quagzipfile.cpp" />
+    <ClCompile Include="quaziodevice.cpp" />
+    <ClCompile Include="quazip.cpp" />
+    <ClCompile Include="quazipdir.cpp" />
+    <ClCompile Include="quazipfile.cpp" />
+    <ClCompile Include="quazipfileinfo.cpp" />
+    <ClCompile Include="quazipnewinfo.cpp" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\trees.c" />
+    <ClCompile Include="unzip.c" />
+    <ClCompile Include="zip.c" />
+    <ClCompile Include="..\..\externals\zlib-1.2.8\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JlCompress.h" />
+    <ClInclude Include="crypt.h" />
+    <ClInclude Include="ioapi.h" />
+    <ClInclude Include="quaadler32.h" />
+    <ClInclude Include="quachecksum32.h" />
+    <ClInclude Include="quacrc32.h" />
+    <CustomBuild Include="quagzipfile.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">quagzipfile.h;C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h;C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQ_BYTE_ORDER=Q_LITTLE_ENDIAN -DWINAPI_FAMILY=WINAPI_FAMILY_PC_APP -DWINAPI_PARTITION_PHONE_APP=1 -DX64 -D__X64__ -D__x64__ -DQUAZIP_BUILD -DNOMINMAX -DQT_CORE_LIB -DQT_QML_DEBUG --compiler-flavor=msvc --include C:/Dev/Qt/CyberTrackerQt/libs/quazip/build/.moc/5.9.1/winrt-x64-msvc2015/moc_predefs.h -IC:/Qt/5.9.1/winrt_x64_msvc2015/mkspecs/winrt-x64-msvc2015 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Dev/Qt/CyberTrackerQt/externals/zlib-1.2.8 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Qt/5.9.1/winrt_x64_msvc2015/include -IC:/Qt/5.9.1/winrt_x64_msvc2015/include/QtCore -I. -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt&quot; quagzipfile.h -o C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quagzipfile.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC quagzipfile.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quagzipfile.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">quagzipfile.h;C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h;C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQ_BYTE_ORDER=Q_LITTLE_ENDIAN -DWINAPI_FAMILY=WINAPI_FAMILY_PC_APP -DWINAPI_PARTITION_PHONE_APP=1 -DX64 -D__X64__ -D__x64__ -DQUAZIP_BUILD -DNOMINMAX -DQT_NO_DEBUG -DQT_CORE_LIB -DQT_QML_DEBUG --compiler-flavor=msvc --include C:/Dev/Qt/CyberTrackerQt/libs/quazip/build/.moc/5.9.1/winrt-x64-msvc2015/moc_predefs.h -IC:/Qt/5.9.1/winrt_x64_msvc2015/mkspecs/winrt-x64-msvc2015 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Dev/Qt/CyberTrackerQt/externals/zlib-1.2.8 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Qt/5.9.1/winrt_x64_msvc2015/include -IC:/Qt/5.9.1/winrt_x64_msvc2015/include/QtCore -I. -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt&quot; quagzipfile.h -o C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quagzipfile.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC quagzipfile.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quagzipfile.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="quaziodevice.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">quaziodevice.h;C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h;C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQ_BYTE_ORDER=Q_LITTLE_ENDIAN -DWINAPI_FAMILY=WINAPI_FAMILY_PC_APP -DWINAPI_PARTITION_PHONE_APP=1 -DX64 -D__X64__ -D__x64__ -DQUAZIP_BUILD -DNOMINMAX -DQT_CORE_LIB -DQT_QML_DEBUG --compiler-flavor=msvc --include C:/Dev/Qt/CyberTrackerQt/libs/quazip/build/.moc/5.9.1/winrt-x64-msvc2015/moc_predefs.h -IC:/Qt/5.9.1/winrt_x64_msvc2015/mkspecs/winrt-x64-msvc2015 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Dev/Qt/CyberTrackerQt/externals/zlib-1.2.8 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Qt/5.9.1/winrt_x64_msvc2015/include -IC:/Qt/5.9.1/winrt_x64_msvc2015/include/QtCore -I. -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt&quot; quaziodevice.h -o C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quaziodevice.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC quaziodevice.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quaziodevice.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">quaziodevice.h;C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h;C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQ_BYTE_ORDER=Q_LITTLE_ENDIAN -DWINAPI_FAMILY=WINAPI_FAMILY_PC_APP -DWINAPI_PARTITION_PHONE_APP=1 -DX64 -D__X64__ -D__x64__ -DQUAZIP_BUILD -DNOMINMAX -DQT_NO_DEBUG -DQT_CORE_LIB -DQT_QML_DEBUG --compiler-flavor=msvc --include C:/Dev/Qt/CyberTrackerQt/libs/quazip/build/.moc/5.9.1/winrt-x64-msvc2015/moc_predefs.h -IC:/Qt/5.9.1/winrt_x64_msvc2015/mkspecs/winrt-x64-msvc2015 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Dev/Qt/CyberTrackerQt/externals/zlib-1.2.8 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Qt/5.9.1/winrt_x64_msvc2015/include -IC:/Qt/5.9.1/winrt_x64_msvc2015/include/QtCore -I. -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt&quot; quaziodevice.h -o C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quaziodevice.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC quaziodevice.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quaziodevice.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="quazip.h" />
+    <ClInclude Include="quazip_global.h" />
+    <ClInclude Include="quazipdir.h" />
+    <CustomBuild Include="quazipfile.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">quazipfile.h;C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h;C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQ_BYTE_ORDER=Q_LITTLE_ENDIAN -DWINAPI_FAMILY=WINAPI_FAMILY_PC_APP -DWINAPI_PARTITION_PHONE_APP=1 -DX64 -D__X64__ -D__x64__ -DQUAZIP_BUILD -DNOMINMAX -DQT_CORE_LIB -DQT_QML_DEBUG --compiler-flavor=msvc --include C:/Dev/Qt/CyberTrackerQt/libs/quazip/build/.moc/5.9.1/winrt-x64-msvc2015/moc_predefs.h -IC:/Qt/5.9.1/winrt_x64_msvc2015/mkspecs/winrt-x64-msvc2015 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Dev/Qt/CyberTrackerQt/externals/zlib-1.2.8 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Qt/5.9.1/winrt_x64_msvc2015/include -IC:/Qt/5.9.1/winrt_x64_msvc2015/include/QtCore -I. -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt&quot; quazipfile.h -o C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quazipfile.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC quazipfile.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quazipfile.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">quazipfile.h;C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h;C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\5.9.1\winrt_x64_msvc2015\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQ_BYTE_ORDER=Q_LITTLE_ENDIAN -DWINAPI_FAMILY=WINAPI_FAMILY_PC_APP -DWINAPI_PARTITION_PHONE_APP=1 -DX64 -D__X64__ -D__x64__ -DQUAZIP_BUILD -DNOMINMAX -DQT_NO_DEBUG -DQT_CORE_LIB -DQT_QML_DEBUG --compiler-flavor=msvc --include C:/Dev/Qt/CyberTrackerQt/libs/quazip/build/.moc/5.9.1/winrt-x64-msvc2015/moc_predefs.h -IC:/Qt/5.9.1/winrt_x64_msvc2015/mkspecs/winrt-x64-msvc2015 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Dev/Qt/CyberTrackerQt/externals/zlib-1.2.8 -IC:/Dev/Qt/CyberTrackerQt/libs/quazip -IC:/Qt/5.9.1/winrt_x64_msvc2015/include -IC:/Qt/5.9.1/winrt_x64_msvc2015/include/QtCore -I. -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt&quot; quazipfile.h -o C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quazipfile.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC quazipfile.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_quazipfile.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="quazipfileinfo.h" />
+    <ClInclude Include="quazipnewinfo.h" />
+    <ClInclude Include="unzip.h" />
+    <ClInclude Include="zip.h" />
+    <ClInclude Include="..\..\externals\zlib-1.2.8\zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\5.9.1\winrt_x64_msvc2015\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">cl -BxC:\Qt\5.9.1\winrt_x64_msvc2015\bin\qmake.exe -nologo -FS -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\5.9.1\winrt_x64_msvc2015\mkspecs\features\data\dummy.cpp 2>NUL >C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\5.9.1\winrt_x64_msvc2015\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">cl -BxC:\Qt\5.9.1\winrt_x64_msvc2015\bin\qmake.exe -nologo -FS -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\5.9.1\winrt_x64_msvc2015\mkspecs\features\data\dummy.cpp 2>NUL >C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Dev\Qt\CyberTrackerQt\libs\quazip\build\.moc\5.9.1\winrt-x64-msvc2015\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClCompile Include="build\.moc\5.9.1\winrt-x64-msvc2015\moc_quagzipfile.cpp" />
+    <ClCompile Include="build\.moc\5.9.1\winrt-x64-msvc2015\moc_quaziodevice.cpp" />
+    <ClCompile Include="build\.moc\5.9.1\winrt-x64-msvc2015\moc_quazipfile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\JlCompress.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\crypt.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\ioapi.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quaadler32.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quachecksum32.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quacrc32.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quagzipfile.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quaziodevice.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quazip.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quazip_global.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quazipdir.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quazipfile.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quazipfileinfo.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\quazipnewinfo.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\unzip.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\libs\quazip\zip.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+    <None Include="C:\Dev\Qt\CyberTrackerQt\externals\zlib-1.2.8\zlib.h">
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</DeploymentContent>
+      <DeploymentContent Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
