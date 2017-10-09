@@ -49,7 +49,6 @@ windows{
     $$PWD/jlcompress.h
 
     SOURCES += $$PWD/qioapi.cpp \
-               $$PWD/JlCompress.cpp \
                $$PWD/quaadler32.cpp \
                $$PWD/quacrc32.cpp \
                $$PWD/quagzipfile.cpp \
@@ -60,7 +59,8 @@ windows{
                $$PWD/quazipfileinfo.cpp \
                $$PWD/quazipnewinfo.cpp \
                $$PWD/unzip.c \
-               $$PWD/zip.c
+               $$PWD/zip.c \
+    $$PWD/jlcompress.cpp
 
 DISTFILES += \
     $$PWD/mac/mac.pri \
