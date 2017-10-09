@@ -1,24 +1,8 @@
 
 LIB_NAME=quazip
 TARGET = $$LIB_NAME
-#$$qt5LibraryTarget($$LIB_NAME)
 QT -= gui
 VERSION=1.0.0
-#TEMPLATE = lib
-CONFIG  *= qt warn_on
-CONFIG  *= relative_qt_rpath
-CONFIG  -= create_cmake
-#DEFINES += QT_NO_CAST_TO_ASCII QT_NO_CAST_FROM_ASCII
-!android{
-#    CONFIG *= debug_and_release
-#    CONFIG *= build_all
-    CONFIG += lib_bundle
-}else{
-    CONFIG -= debug
-    CONFIG *=release
-}
-
-PREFIX=$$[QT_INSTALL_PREFIX]
 #CONFIG(debug, debug|release) {
 #    DEBUG_OR_RELEASE = debug
 #    android{
@@ -70,8 +54,5 @@ include($$PWD/quazip.pri)
 #    # workaround for qdatetime.h macro bug
 #    DEFINES += NOMINMAX
 #}
-target.path = $$[QT_INSTALL_LIBS]
-#INSTALLS += target
-CONFIG *= install_ok  # Do not cargo-cult this!
-CONFIG *= install
+
 load(qt_module)

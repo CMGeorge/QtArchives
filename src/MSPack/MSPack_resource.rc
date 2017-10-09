@@ -21,7 +21,7 @@ VS_VERSION_INFO VERSIONINFO
 				VALUE "FileDescription", "C++ Application Development Framework\0"
 				VALUE "FileVersion", "1.0.0.0\0"
 				VALUE "LegalCopyright", "Copyright (C) 2017 The Qt Company Ltd.\0"
-				VALUE "OriginalFilename", "quazip.dll\0"
+				VALUE "OriginalFilename", "MSPack.dll\0"
 				VALUE "ProductName", "Qt5\0"
 				VALUE "ProductVersion", "1.0.0.0\0"
 			END

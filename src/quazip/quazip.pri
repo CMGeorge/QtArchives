@@ -33,7 +33,6 @@ windows{
     HEADERS += \
             $$PWD/crypt.h \
             $$PWD/ioapi.h \
-            $$PWD/JlCompress.h \
             $$PWD/quaadler32.h \
             $$PWD/quachecksum32.h \
             $$PWD/quacrc32.h \
@@ -46,7 +45,8 @@ windows{
             $$PWD/quazip.h \
             $$PWD/quazipnewinfo.h \
             $$PWD/unzip.h \
-            $$PWD/zip.h
+            $$PWD/zip.h \
+    $$PWD/jlcompress.h
 
     SOURCES += $$PWD/qioapi.cpp \
                $$PWD/JlCompress.cpp \

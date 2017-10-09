@@ -23,7 +23,7 @@ Original ZIP package is copyrighted by Gilles Vollant and contributors,
 see quazip/(un)zip.h files for details. Basically it's the zlib license.
 */
 
-#include "JlCompress.h"
+#include "jlcompress.h"
 #include <QDebug>
 
 static bool copyData(QIODevice &inFile, QIODevice &outFile)

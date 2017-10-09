@@ -1,6 +1,6 @@
 %modules = ( # path to module name map
     "quazip" => "$basedir/src/quazip",
-	"MSPack"	=> "$basedir/src/QCab",
+	"MSPack"	=> "$basedir/src/MSPack",
 );
 %moduleheaders = ( # restrict the module headers to those found in relative path
 );
