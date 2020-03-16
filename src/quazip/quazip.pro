@@ -22,6 +22,10 @@ windows{
     INCLUDEPATH += $$ZLIB_PWD/
     DEPENDPATH += $$ZLIB_PWD/
 #    warning ("Inscluded Path: " $$ZLIB_PWD/zlib-1.2.8/);
+}else:mac{
+    ZLIB_PWD = $$PWD/m_zlib/
+    INCLUDEPATH += $$ZLIB_PWD/
+    DEPENDPATH += $$ZLIB_PWD/
 }else{
     LIBS += -lz
 }

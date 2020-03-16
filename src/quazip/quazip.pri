@@ -6,7 +6,7 @@
     CONFIG+=QUAZIP
 #!clang
 #!android|!clang
-windows{
+#windows{
     HEADERS += $$ZLIB_PWD/zlib.h
     SOURCES += $$ZLIB_PWD/adler32.c \
                 $$ZLIB_PWD/crc32.c \
@@ -22,7 +22,7 @@ windows{
                 $$ZLIB_PWD/deflate.c \
                 $$ZLIB_PWD/zutil.c \
                 $$ZLIB_PWD/trees.c
-}
+#}
 #    !contains(HEADERS,.*crc32.h){
 #        HEADERS+=$$externals_dir/zlib-1.2.8/crc32.h
 #        SOURCES+=$$externals_dir/zlib-1.2.8/crc32.c
