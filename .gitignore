@@ -47,3 +47,4 @@ src/quazip/object_script.quazip.Release
 src/MSPack/MSPackd_resource.rc
 src/MSPack/MSPack_resource.rc
 build
+build_5_*
