@@ -7,21 +7,22 @@
 #!clang
 #!android|!clang
 #windows{
-    HEADERS += $$ZLIB_PWD/zlib.h
-    SOURCES += $$ZLIB_PWD/adler32.c \
-                $$ZLIB_PWD/crc32.c \
-#                $$externals_dir/zlib-1.2.8/gzopen.c \
-                $$ZLIB_PWD/gzclose.c \
-                $$ZLIB_PWD/gzread.c \
-                $$ZLIB_PWD/gzwrite.c \
-                $$ZLIB_PWD/gzlib.c \
-                $$ZLIB_PWD/inflate.c \
-                $$ZLIB_PWD/inftrees.c \
-                $$ZLIB_PWD/infback.c \
-                $$ZLIB_PWD/inffast.c \
-                $$ZLIB_PWD/deflate.c \
-                $$ZLIB_PWD/zutil.c \
-                $$ZLIB_PWD/trees.c
+#    HEADERS += $$ZLIB_PWD/zlib.h \
+    $$PWD/quazip_qt_compat.h
+#    SOURCES += $$ZLIB_PWD/adler32.c \
+#                $$ZLIB_PWD/crc32.c \
+##                $$externals_dir/zlib-1.2.8/gzopen.c \
+#                $$ZLIB_PWD/gzclose.c \
+#                $$ZLIB_PWD/gzread.c \
+#                $$ZLIB_PWD/gzwrite.c \
+#                $$ZLIB_PWD/gzlib.c \
+#                $$ZLIB_PWD/inflate.c \
+#                $$ZLIB_PWD/inftrees.c \
+#                $$ZLIB_PWD/infback.c \
+#                $$ZLIB_PWD/inffast.c \
+#                $$ZLIB_PWD/deflate.c \
+#                $$ZLIB_PWD/zutil.c \
+#                $$ZLIB_PWD/trees.c
 #}
 #    !contains(HEADERS,.*crc32.h){
 #        HEADERS+=$$externals_dir/zlib-1.2.8/crc32.h

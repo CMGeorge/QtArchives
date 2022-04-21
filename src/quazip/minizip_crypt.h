@@ -29,23 +29,11 @@
 
 #include "quazip_global.h"
 #include "zconf.h"
-
 #pragma GCC diagnostic ignored "-Wold-style-cast"
 #pragma GCC diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wregister"
 #pragma GCC diagnostic ignored "-Wunused-function"
 
-#if !defined(NOBYFOUR) && defined(Z_U4)
-#  define BYFOUR
-#endif
-#ifdef BYFOUR
-/*local*/ unsigned long crc32_little OF((unsigned long,
-                                         const unsigned char FAR *, z_size_t));
-/*local*/ unsigned long crc32_big OF((unsigned long,
-                                      const unsigned char FAR *, z_size_t));
-#  define TBLS 8
-#else
-#  define TBLS 1
-#endif /* BYFOUR */
 
 #define CRC32(c, b) ((*(pcrc_32_tab+(((int)(c) ^ (b)) & 0xff))) ^ ((c) >> 8))
 
@@ -59,8 +47,8 @@ static int decrypt_byte(unsigned long* pkeys, const z_crc_t FAR * pcrc_32_tab QU
                      * unpredictable manner on 16-bit systems; not a problem
                      * with any known compiler so far, though */
 
-    temp = (static_cast<unsigned>(*(pkeys+2)) & 0xffff) | 2;
-    return static_cast<int>(((temp * (temp ^ 1)) >> 8) & 0xff);
+    temp = ((unsigned)(*(pkeys+2)) & 0xffff) | 2;
+    return (int)(((temp * (temp ^ 1)) >> 8) & 0xff);
 }
 
 /***********************************************************************
@@ -72,8 +60,7 @@ static int update_keys(unsigned long* pkeys,const z_crc_t FAR * pcrc_32_tab,int 
     (*(pkeys+1)) += (*(pkeys+0)) & 0xff;
     (*(pkeys+1)) = (*(pkeys+1)) * 134775813L + 1;
     {
-//      register
-            int keyshift = (int)((*(pkeys+1)) >> 24);
+      register int keyshift = (int)((*(pkeys+1)) >> 24);
       (*(pkeys+2)) = CRC32((*(pkeys+2)), keyshift);
     }
     return c;

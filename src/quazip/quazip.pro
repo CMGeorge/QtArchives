@@ -1,7 +1,12 @@
 
+# This one handles dllimport/dllexport directives.
+DEFINES += QUAZIP_BUILD
+
+
 LIB_NAME=quazip
 TARGET = $$LIB_NAME
 QT -= gui
+QT += core core5compat
 VERSION=1.0.0
 #CONFIG(debug, debug|release) {
 #    DEBUG_OR_RELEASE = debug
@@ -23,15 +28,15 @@ windows{
     DEPENDPATH += $$ZLIB_PWD/
 #    warning ("Inscluded Path: " $$ZLIB_PWD/zlib-1.2.8/);
 }else:mac{
-    ZLIB_PWD = $$PWD/m_zlib/
-    INCLUDEPATH += $$ZLIB_PWD/
-    DEPENDPATH += $$ZLIB_PWD/
+#    ZLIB_PWD = $$PWD/m_zlib/
+#    INCLUDEPATH += $$ZLIB_PWD/
+#    DEPENDPATH += $$ZLIB_PWD/
+    LIBS += -lz
 }else{
     LIBS += -lz
 }
 
-# This one handles dllimport/dllexport directives.
-DEFINES += QUAZIP_BUILD
+
 
 ## You'll need to define this one manually if using a build system other
 ## than qmake or using QuaZIP sources directly in your project.

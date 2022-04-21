@@ -1,6 +1,8 @@
 TEMPLATE = subdirs
-SUBDIRS += \
-    quazip \
-    MSPack \
-#    7zip
+
+SUBDIRS *= quazip
+
+lessThan(QT_MAJOR_VERSION,6){
+    SUBDIRS *=MSPack
+}
 	
